@@ -19,6 +19,9 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the backend of the project");
+});
 app.use("/api/admin", adminRouter);
 app.use("/api/submissions", submissionRouter);
 
